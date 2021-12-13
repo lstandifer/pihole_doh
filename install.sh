@@ -8,7 +8,7 @@ apt-get -y update \
 # install cloudflared
 
 cd /tmp \
-    && wget wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 \
+    && wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 \
     && cp ./cloudflared /usr/local/bin \
     && rm -f ./cloudflared-stable-linux-arm.tgz
 useradd -s /usr/sbin/nologin -r -M cloudflared \
