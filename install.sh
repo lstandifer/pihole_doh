@@ -10,8 +10,7 @@ apt-get -y update \
 cd /tmp \
     && wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 \
     && cp ./cloudflared /usr/local/bin \
-    && rm -f ./cloudflared-stable-linux-arm.tgz
-useradd -s /usr/sbin/nologin -r -M cloudflared \
+    && useradd -s /usr/sbin/nologin -r -M cloudflared \
     && chown cloudflared:cloudflared /usr/local/bin/cloudflared
     
 # clean cloudflared config
